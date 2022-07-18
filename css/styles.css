@@ -9,23 +9,23 @@
     --secondary-txt-color:#757575;
     --black-txt-color: #000000;
     --white-txt-color: #ffffff;
-    --transparent-txt-color: rgba(255, 255, 255, 0.6);
+    --transparent-txt-color: #ffffff99;
 
     /* bcg-colors */
     --white-bcg-color:#FFFFFF;
     --dark-bcg-color:#2F303A;
     --secondary-bcg-color: #F5F4FA;
     --hero-section-bcg-color: #C4C4C4;
-    --linear-gradient: rgba(47, 48, 58, 0.4);
-    --about-desc: rgba(47, 48, 58, 0.8);
-    --footer-icon-bcg-color: rgba(255, 255, 255, 0.1);
-    --backdrop-bcg: rgba(0, 0, 0, 0.2);
-    --portfolio-overlay: rgba(33, 150, 243, 0.9);
+    --linear-gradient: #2f303a66;
+    --about-desc: #2f303acc;
+    --footer-icon-bcg-color: #ffffff1a;
+    --backdrop-bcg: #00000033;
+    --portfolio-overlay: #2196f3e6;
     
     /* others */
     --hero-btn-hover-color: #188CE8; 
-    --border-color: rgb(236, 236, 236);
-    --form-border-color: rgba(33, 33, 33, 0.2);
+    --border-color: #ececec;
+    --form-border-color: #21212133;
     --secondary-border-color: #EEEEEE;
     --icon-color: #AFB1B8;
     --icon-color-white: #fff;
@@ -37,8 +37,6 @@
     /* animation */
     --anim: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-    
 
     /* Reset */
 h1,
@@ -79,24 +77,21 @@ img {
     margin: -1px;
 }
 
+/* Сітка flex-box */
+.card-set {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * var(--indent));
+    margin-top: calc(-1 * var(--indent));
+}
 
-    /* Сітка flex-box */
-    .card-set {
-        display: flex;
-        flex-wrap: wrap;
-        margin-left: calc(-1 * var(--indent));
-        margin-top: calc(-1 * var(--indent));
-    }
+.card-set__item {
+    flex-basis: calc(100% / var(--items) - var(--indent));
+    margin-left: var(--indent);
+    margin-top: var(--indent);
+}
 
-    .card-set__item {
-        flex-basis: calc(100% / var(--items) - var(--indent));
-        margin-left: var(--indent);
-        margin-top: var(--indent);
-    }
-
-
-    /* Common styles */
-
+/* Common styles */
 body {
     font-family: "Roboto", sans-serif;
     letter-spacing: 0.03em;
@@ -126,11 +121,9 @@ body {
     text-align: center;
 }
 
-
 .btn {
     display: flex;
     align-items: center;
-
     width: 200px;
     height: 50px;
 
@@ -144,6 +137,10 @@ body {
     border-radius: 4px;
     border: none; 
     cursor: pointer;   
+}
+
+.icon {
+    fill: currentColor;
 }
 
 /* Посилання на соц-мережі */
@@ -169,10 +166,6 @@ body {
     justify-content: center;
 
     border-radius: 50px;
-}
-
-.socials__icon {
-    fill: currentColor;
 }
 
 /* Header */
@@ -213,7 +206,6 @@ body {
 
 .header__link {
     position: relative;
-
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -240,7 +232,6 @@ body {
     position: absolute;
     left: 0;
     bottom: 0px;
-
     transform: translateY( 1px);
     
     width: 100%;
@@ -280,7 +271,6 @@ body {
 
 .header-contact__icon {
     margin-right: 10px;
-    fill: currentColor;
 }
 
 .header {
@@ -389,11 +379,9 @@ body {
 .about__desc {
     position: absolute;
     bottom: 0;
-
     display: flex;
     justify-content: center;
     align-items: center;
-    
     width: 100%;
     height: 70px;
 
@@ -401,7 +389,6 @@ body {
     font-size: 14px;
     line-height: 1.1;
     text-transform: uppercase;
-
     color: var(--white-txt-color);
     background-color: var(--about-desc);
 }
@@ -469,12 +456,10 @@ body {
     display: flex;
     width: 100%;
     height: 100%;
-    
     align-items: center;
     justify-content: center;
 
     color: var(--icon-color);
-
     border: 1px solid var(--icon-color);
     border-radius: 4px;
 
@@ -485,10 +470,6 @@ body {
 .client-list__link:focus {
     color: var(--acent-txt-color);
     border-color: var(--acent-txt-color);
-}
-
-.clients-list__icon {
-    fill: currentColor;
 }
 
 /* footer */
@@ -503,8 +484,6 @@ body {
     display: flex;
     align-items: baseline;
 }
-
-
 
 .footer__logo {
     display: block;
@@ -561,7 +540,6 @@ body {
     text-transform: uppercase;
     color: var(--white-txt-color);
 }
-
 
 .socials__link--white {
     color: var(--white-txt-color);
@@ -677,7 +655,7 @@ body {
     border-right: 1px solid var(--secondary-border-color);
 }
 
-.portfolio__title {
+.portfolio__subtitle {
     margin-bottom: 4px;
 
     font-weight: 700;
@@ -752,7 +730,6 @@ body {
     display: flex;
     flex-direction: column;
     padding: 40px;
-
     width: 528px;
     min-height: 581px;
 
@@ -763,17 +740,15 @@ body {
     transition: transform var(--anim);
 }
 
-.modal-close-btn {
+.modal__close-btn {
     position: absolute;
     top: 8px;
     right: 8px;
-
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: auto;
     padding: 0;
-
     width: 30px;
     height: 30px;
 
@@ -785,16 +760,12 @@ body {
     transition: color var(--anim);
 }
 
-.modal-close-btn:hover,
-.modal-close-btn:focus {
+.modal__close-btn:hover,
+.modal__close-btn:focus {
     color: var(--acent-txt-color);
 }
 
-.close-icon {
-    fill: currentColor;
-}
-
-.modal-title {
+.modal__title {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -805,13 +776,13 @@ body {
     line-height: 1.1;
 }
 
-.modal-form-group {
+.form__group {
     position: relative;
     display: block;
     flex-direction: column;
 }
 
-.modal-form-field-title {
+.form__title {
     display: block;
     margin-bottom: 4px;
     font-size: 12px;
@@ -820,7 +791,7 @@ body {
     color: var(--secondary-txt-color);
 }
 
-.modal-form-field {
+.form__field {
     display: block;
     margin-bottom: 10px;
     padding-left: 42px;
@@ -835,7 +806,7 @@ body {
     transition: border-color var(--anim);
 }
 
-.modal-form-icon {
+.form__icon {
     position: absolute;
     bottom: 11px;
     left: 12px;
@@ -844,22 +815,22 @@ body {
     transition: fill var(--anim);
 }
 
-.modal-form-field:focus {
+.form__field:focus {
     border-color: var(--acent-txt-color);
 }
 
-.modal-form-field:focus + .modal-form-icon {
+.form__field:focus + .form__icon {
     fill: var(--acent-txt-color);
 }
 
-.modal-coment-field {
+.form__comment-field {
     padding: 12px 16px;
     margin-bottom: 20px;
     height: 120px;
     resize: none;
 }
 
-.modal-coment-field::placeholder {
+.form__comment-field::placeholder {
     font-size: 14px;
     line-height: 1.1;
     letter-spacing: 0.01em;
@@ -867,15 +838,14 @@ body {
     color: rgba(117, 117, 117, 0.5);
 }
 
-
-.form-checkbox {
+.form__checkbox {
     display: flex;
     align-items: center; 
     justify-content: center;
     margin-bottom: 30px;
 }
 
-.form-checkbox-custom {
+.checkbox__custom {
     display: inline-flex;
     margin-right: 8px;
     padding-top: 4px;
@@ -890,50 +860,37 @@ body {
     transition: background-color var(--anim), outline-color var(--anim);
 }
 
-.checkbox-icon {
+.checkbox__icon {
     fill: var(--icon-color-white);
 }
 
-.form-checkbox-input:checked + .form-checkbox-custom {
+.form__checkbox-input:checked + .checkbox__custom {
     background-color: var(--acent-txt-color);
     outline-color: var(--acent-txt-color);
 }
 
-.checkbox-agreement-text {
+.checkbox__text {
     font-size: 14px;
     line-height: 1.7;
     color: var(--secondary-txt-color);
     user-select: none;
 }
 
-.checkbox-agreement-link {
+.checkbox__link {
     text-decoration-line: underline;
     color: var(--acent-txt-color);
 }
 
-.modal-btn {
+.modal__btn {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 200px;
-    height: 50px;
 
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.9;    
-    letter-spacing: 0.06em;
-    color: var(--white-txt-color);
-    
-    background-color: var(--acent-txt-color);
-    border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    cursor: pointer;
-
     transition: background-color var(--anim);
 }
 
-.modal-btn:hover,
-.modal-btn:focus {
+.modal__btn:hover,
+.modal__btn:focus {
     background-color: var(--hero-btn-hover-color)
 }
