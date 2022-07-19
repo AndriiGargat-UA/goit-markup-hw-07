@@ -1,5 +1,7 @@
 /* Team sections */
 .team {
+    @include section(94px);
+
     background-color: var(--secondary-bcg-color);
 
     &__list {

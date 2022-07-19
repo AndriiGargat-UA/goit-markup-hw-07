@@ -1,5 +1,7 @@
 /* About sections */
 .about {
+    @include section(94px);
+
     padding-top: 0;
 
     &__item {

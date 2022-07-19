@@ -1,5 +1,7 @@
 // portfolio
 .portfolio {
+    @include section(94px);
+
     &__btn-list {
         display: flex;
         justify-content: center;

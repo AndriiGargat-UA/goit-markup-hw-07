@@ -1,7 +1,12 @@
 /* clients-section */
-.clients-list {
-    display: flex;
-    --items: 6;
+.clients {
+    @include section(94px);
+
+    &__list {
+        display: flex;
+        --items: 6;
+    }
+
 
     &__item {
         width: 170px;

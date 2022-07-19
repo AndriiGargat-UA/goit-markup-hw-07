@@ -120,6 +120,14 @@ img {
   cursor: pointer;
 }
 
+.section-title {
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  text-align: center;
+}
+
 /* Посилання на соц-мережі */
 .socials {
   display: -webkit-box;
@@ -613,6 +621,10 @@ img {
 }
 
 /* Features section */
+.features {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 .features__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -655,6 +667,8 @@ img {
 
 /* About sections */
 .about {
+  padding-top: 94px;
+  padding-bottom: 94px;
   padding-top: 0;
 }
 .about__item {
@@ -684,6 +698,8 @@ img {
 
 /* Team sections */
 .team {
+  padding-top: 94px;
+  padding-bottom: 94px;
   background-color: var(--secondary-bcg-color);
 }
 .team__list {
@@ -714,17 +730,21 @@ img {
 }
 
 /* clients-section */
-.clients-list {
+.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.clients__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   --items: 6;
 }
-.clients-list__item {
+.clients__item {
   width: 170px;
   height: 92px;
 }
-.clients-list__link {
+.clients__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -742,7 +762,7 @@ img {
   -webkit-transition: color var(--anim);
   transition: color var(--anim);
 }
-.clients-list__link:hover, .clients-list__link:focus {
+.clients__link:hover, .clients__link:focus {
   color: var(--acent-txt-color);
   border-color: var(--acent-txt-color);
 }
@@ -845,6 +865,10 @@ img {
   fill: var(--icon-color-white);
 }
 
+.portfolio {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 .portfolio__btn-list {
   display: -webkit-box;
   display: -ms-flexbox;
