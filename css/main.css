@@ -238,6 +238,28 @@ img {
   cursor: pointer;
 }
 
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--backdrop-bcg);
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: opacity var(--anim), visibility var(--anim);
+  transition: opacity var(--anim), visibility var(--anim);
+}
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+.backdrop.is-hidden .modal {
+  -webkit-transform: translate(-50%, -50%) scale(0.8);
+          transform: translate(-50%, -50%) scale(0.8);
+}
+
 /* modal */
 .modal {
   position: absolute;
@@ -442,28 +464,6 @@ img {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
   color: var(--acent-txt-color);
-}
-
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--backdrop-bcg);
-  visibility: visible;
-  opacity: 1;
-  -webkit-transition: opacity var(--anim), visibility var(--anim);
-  transition: opacity var(--anim), visibility var(--anim);
-}
-.backdrop.is-hidden {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-}
-.backdrop.is-hidden .modal {
-  -webkit-transform: translate(-50%, -50%) scale(0.8);
-          transform: translate(-50%, -50%) scale(0.8);
 }
 
 /* Header */
